@@ -14,7 +14,7 @@ const sv = express();
 sv.use(express.json());
 sv.use(morgan("combined"));
 
-sv.use("/v1/movie", movieRoute);
+sv.use("/v1/movies", movieRoute);
 sv.use("/v1/auth", useRoute);
 sv.use("/v1/search", searchRoute);
 sv.use("/v1/sorted", sortedRoute);
