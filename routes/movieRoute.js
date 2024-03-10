@@ -10,7 +10,7 @@ import {
 const movieRoute = Router();
 
 movieRoute.post(
-  "",
+  "/",
   uploader.single("file"),
   asyncCatch(createMovieValid),
   asyncCatch(uploadFileValidate),
