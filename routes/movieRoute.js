@@ -10,7 +10,9 @@ import {
 const movieRoute = Router();
 
 movieRoute.post(
+
   "/:userId",
+
   uploader.single("file"),
   asyncCatch(createMovieValid),
   asyncCatch(uploadFileValidate),
