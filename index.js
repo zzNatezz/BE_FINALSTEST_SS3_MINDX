@@ -13,8 +13,6 @@ sv.use(morgan("combined"));
 
 sv.use("/v1/movie", movieRoute);
 
-
-
 mongoose
   .connect(process.env.MONGODB)
   .then(() =>
