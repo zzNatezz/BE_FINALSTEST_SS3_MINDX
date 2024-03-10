@@ -11,7 +11,7 @@ const sv = express();
 sv.use(express.json());
 sv.use(morgan("combined"));
 
-sv.use("/v1/movie", movieRoute);
+sv.use("/v1/movies", movieRoute);
 
 mongoose
   .connect(process.env.MONGODB)
