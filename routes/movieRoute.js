@@ -10,11 +10,17 @@ import {
 const movieRoute = Router();
 
 movieRoute.post(
-  "",
+  "/:userId",
   uploader.single("file"),
   asyncCatch(createMovieValid),
   asyncCatch(uploadFileValidate),
   asyncCatch(movieController.createMovie)
 );
+
+movieRoute.get("", asyncCatch(movieController.getAllmovie))
+
+movieRoute.delete("/:userId/:movieId", asyncCatch(movieController.removeMovie))
+
+movieRoute.put('/:movideId', asyncCatch(movieController.updateMovie))
 
 export default movieRoute;
