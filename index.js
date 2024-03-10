@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import express from "express";
 import morgan from "morgan";
 import dotenv from "dotenv";
+import movieRoute from "./routes/movieRoute.js";
 
 dotenv.config();
 
@@ -10,7 +11,7 @@ const sv = express();
 sv.use(express.json());
 sv.use(morgan("combined"));
 
-// sv.use("/v1/movie", movieRoute);
+sv.use("/v1/movie", movieRoute);
 
 
 
